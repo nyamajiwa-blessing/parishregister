@@ -1,0 +1,33 @@
+.root
+{
+    -fx-background-image: url("../imgs/ailse.jpg");
+    -fx-background-size: cover;
+    /*-fx-opacity: 0.5;*/
+}
+
+#btn-login
+{
+    -fx-background-color: blue;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+}
+
+#btn-login:hover
+{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: blue;
+    -fx-font-size: 24px;
+}
+
+#btn-login:selected
+{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: blue;
+    -fx-font-size: 24px;
+}
+
+.input-field:focused
+{
+    -fx-border-color: blue;
+    -fx-border-width: 5px;
+}

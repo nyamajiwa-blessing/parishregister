@@ -1,0 +1,19 @@
+.root
+{
+    -fx-background-image: url("../imgs/interior.jpg");
+    -fx-background-size: cover;
+}
+
+.btn
+{
+    -fx-background-color: #ffffff;
+    -fx-font-size: 20px;
+    -fx-text-fill: brown;
+}
+
+.btn:hover
+{
+    -fx-background-color: goldenrod;
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+}

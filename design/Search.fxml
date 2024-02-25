@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="root" stylesheets="@../css/search.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parishregister.SearchController">
+   <children>
+      <HBox alignment="CENTER" layoutX="19.0" layoutY="61.0" prefHeight="151.0" prefWidth="869.0" spacing="10.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <RadioButton fx:id="rdbBaptism" mnemonicParsing="false" text="Baptism" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="searchTarget" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdbMarriage" mnemonicParsing="false" text="Marriage" textFill="WHITE" toggleGroup="$searchTarget" />
+                  <RadioButton fx:id="rdbDeaths" mnemonicParsing="false" text="Deaths" textFill="WHITE" toggleGroup="$searchTarget" />
+               </children>
+            </VBox>
+            <TextField fx:id="txtSearch" prefHeight="35.0" prefWidth="383.0" promptText="Search by last name" styleClass="text" stylesheets="@../css/search.css" />
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#initSearch" prefHeight="35.0" prefWidth="100.0" stylesheets="@../css/search.css" text="Search" />
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearTextBox" prefHeight="35.0" prefWidth="94.0" stylesheets="@../css/search.css" text="Clear" />
+            <Button fx:id="btnDashboard" layoutX="689.0" layoutY="68.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="94.0" stylesheets="@../css/search.css" text="Dashboard" />
+         </children>
+      </HBox>
+      <Label layoutX="285.0" layoutY="14.0" text="Start typing below to searching..." textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblDisplay" layoutX="16.0" layoutY="237.0" prefHeight="341.0" prefWidth="869.0">
+        <columns>
+          <TableColumn fx:id="colFullName" prefWidth="292.0" text="Full Name" />
+          <TableColumn fx:id="colLocation" minWidth="0.0" prefWidth="289.0" text="Location" />
+            <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="287.0" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

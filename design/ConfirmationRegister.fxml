@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1100.0" styleClass="root" stylesheets="@../css/confirmationregister.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parishregister.ConfirmationRegisterController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="1.0" layoutY="-2.0" prefHeight="594.0" prefWidth="324.0" spacing="5.0">
+               <children>
+                  <Label fx:id="lblHeading" text="Confirmation Register" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFirstName" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="85.0" text="First Name:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFirstName" prefHeight="35.0" promptText="First Name" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <Label fx:id="lblSurname" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="27.0" prefHeight="17.0" prefWidth="69.0" text="Surname:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSurname" layoutX="10.0" layoutY="44.0" prefHeight="35.0" promptText="Surname" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <Label fx:id="lblFathers" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="69.0" prefHeight="21.0" prefWidth="115.0" text="Father's Name:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFathers" layoutX="10.0" layoutY="86.0" prefHeight="35.0" promptText="Father's Name" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <Label fx:id="lblMothers" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="111.0" prefHeight="21.0" prefWidth="112.0" text="Mother's Name:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtMothers" layoutX="10.0" layoutY="128.0" prefHeight="35.0" promptText="Mother's Name" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <Label fx:id="lblPlace" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" prefHeight="21.0" prefWidth="52.0" text="Place:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPlace" layoutX="10.0" layoutY="170.0" prefHeight="35.0" promptText="Place" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <Label fx:id="lblDate" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="195.0" prefHeight="17.0" prefWidth="69.0" text="Date:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDate" layoutX="15.0" layoutY="358.0" prefHeight="35.0" promptText="Date" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <Label fx:id="lblSponsor" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="237.0" prefHeight="17.0" prefWidth="69.0" text="Sponsor:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSponsor" layoutX="10.0" layoutY="254.0" prefHeight="35.0" promptText="Sponsor" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <Label fx:id="lblLocation" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="279.0" prefHeight="21.0" prefWidth="127.0" text="Baptism Location:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBaptismLocation" layoutX="10.0" layoutY="296.0" prefHeight="35.0" promptText="Baptism Location" styleClass="input-field" stylesheets="@../css/confirmationregister.css" />
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveDetails" prefWidth="80.0" text="Save" />
+                        <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#clearTextBoxes" prefWidth="80.0" text="Clear" />
+                        <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#backToDash" prefWidth="80.0" text="Dashboard" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TableView fx:id="tblDisplay" layoutX="-1.0" prefHeight="594.0" prefWidth="768.0">
+              <columns>
+                <TableColumn fx:id="colFirstName" prefWidth="75.0" text="First Name" />
+                <TableColumn fx:id="colSurname" prefWidth="75.0" text="Surname" />
+                  <TableColumn fx:id="colFathersName" prefWidth="97.0" text="Father's Name" />
+                  <TableColumn fx:id="colMothersName" prefWidth="97.0" text="Mother's Name" />
+                  <TableColumn fx:id="colPlace" prefWidth="97.0" text="Place" />
+                  <TableColumn fx:id="colDate" prefWidth="97.0" text="Date" />
+                  <TableColumn fx:id="colSponsor" prefWidth="97.0" text="Sponsor" />
+                  <TableColumn fx:id="colBaptismLocation" prefWidth="132.0" text="Baptism Location" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

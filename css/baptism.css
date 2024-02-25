@@ -1,0 +1,29 @@
+.root
+{
+    -fx-background-image: url("../imgs/interior.jpg");
+    -fx-background-size: cover;
+}
+
+.btn
+{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: goldenrod;
+    -fx-font-size: 18px;
+}
+
+.btn:hover
+{
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+
+.input-fields
+{
+    -fx-background-color: #ffffff;
+}
+
+.input-fields:focused
+{
+    -fx-border-color: hotpink;
+    -fx-border-width: 3px;
+}

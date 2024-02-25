@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" styleClass="root" stylesheets="@../css/membership.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parishregister.MembershipController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="120.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="600.0" prefWidth="324.0" spacing="5.0">
+               <children>
+                  <Label text="Membership" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Diocese" textFill="WHITE" />
+                  <TextField fx:id="txtDiocese" prefHeight="35.0" promptText="Diocese" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <Label layoutX="10.0" layoutY="27.0" text="Parish" textFill="WHITE" />
+                  <TextField fx:id="txtParish" layoutX="10.0" layoutY="44.0" prefHeight="35.0" promptText="Parish" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <Label layoutX="10.0" layoutY="69.0" text="Place:" textFill="WHITE" />
+                  <TextField fx:id="txtPlace" layoutX="10.0" layoutY="86.0" prefHeight="35.0" promptText="Place" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <Label layoutX="10.0" layoutY="111.0" text="Home:" textFill="WHITE" />
+                  <TextField fx:id="txtHome" layoutX="10.0" layoutY="128.0" prefHeight="35.0" promptText="Home" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <Label layoutX="10.0" layoutY="153.0" text="Spouse:" textFill="WHITE" />
+                  <TextField fx:id="txtSpouse" layoutX="10.0" layoutY="170.0" prefHeight="35.0" promptText="Spouse" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <Label layoutX="10.0" layoutY="195.0" text="Baptised" textFill="WHITE" />
+                  <HBox alignment="CENTER" spacing="20.0" />
+                  <TextField fx:id="txtBaptised" layoutX="15.0" layoutY="349.0" prefHeight="35.0" promptText="Yes or No" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <Label layoutX="10.0" layoutY="237.0" text="Married" textFill="WHITE" />
+                  <TextField fx:id="txtMarried" layoutX="15.0" layoutY="396.0" prefHeight="35.0" promptText="Married or Single" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <HBox alignment="CENTER" spacing="20.0" />
+                  <Label layoutX="10.0" layoutY="279.0" text="No. of Children" textFill="WHITE" />
+                  <TextField fx:id="txtChildren" layoutX="10.0" layoutY="296.0" prefHeight="35.0" promptText="No. of Children" styleClass="input-field" stylesheets="@../css/membership.css" />
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="314.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnSave" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveDetails" prefHeight="40.0" prefWidth="90.0" text="Save" />
+                        <Button fx:id="btnClear" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearDetails" prefHeight="40.0" prefWidth="90.0" text="Clear" />
+                        <Button fx:id="btnDashboard" alignment="CENTER" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#backToDash" prefHeight="40.0" prefWidth="90.0" text="Dashboard" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="795.0">
+         <children>
+            <TableView fx:id="tblDisplay" layoutY="-2.0" prefHeight="600.0" prefWidth="768.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colDiocese" prefWidth="75.0" text="Diocese" />
+                  <TableColumn fx:id="colParish" prefWidth="75.0" text="Parish" />
+                  <TableColumn fx:id="colPlace" prefWidth="75.0" text="Place" />
+                  <TableColumn fx:id="colHome" prefWidth="75.0" text="Home" />
+                  <TableColumn fx:id="colSpouse" prefWidth="75.0" text="Spouse" />
+                  <TableColumn fx:id="colBaptised" prefWidth="75.0" text="Baptised" />
+                  <TableColumn fx:id="colMarried" prefWidth="75.0" text="Married" />
+                  <TableColumn fx:id="colChildren" prefWidth="167.0" text="No. of Children" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

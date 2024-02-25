@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1151.0" styleClass="root" stylesheets="@../css/deaths.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parishregister.DeathsController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="-3.0" layoutY="-4.0" prefHeight="600.0" prefWidth="345.0" spacing="10.0">
+               <children>
+                  <Label text="Deaths Register" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="First Name" textFill="WHITE" />
+                  <TextField fx:id="txtFirstName" prefHeight="35.0" promptText="First Name" styleClass="input-field" stylesheets="@../css/deaths.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="27.0" text="Surname" textFill="WHITE" />
+                  <TextField fx:id="txtSurname" layoutX="10.0" layoutY="44.0" prefHeight="35.0" promptText="Surname" styleClass="input-field" stylesheets="@../css/deaths.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="69.0" text="Age" textFill="WHITE" />
+                  <TextField fx:id="txtAge" layoutX="10.0" layoutY="86.0" prefHeight="35.0" promptText="Age" styleClass="input-field" stylesheets="@../css/deaths.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="111.0" text="Next of Kin" textFill="WHITE" />
+                  <TextField fx:id="txtNextOfKin" layoutX="10.0" layoutY="128.0" prefHeight="35.0" promptText="Next of Kin" styleClass="input-field" stylesheets="@../css/deaths.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="153.0" text="Death Date" textFill="WHITE" />
+                  <TextField fx:id="txtDeathDate" layoutX="15.0" layoutY="385.0" prefHeight="35.0" promptText="DD-MM-YYYY" styleClass="input-field" stylesheets="@../css/deaths.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="195.0" text="Burial Date" textFill="WHITE" />
+                  <TextField fx:id="txtBurialDate" layoutX="15.0" layoutY="434.0" prefHeight="35.0" promptText="DD-MM-YYYY" styleClass="input-field" stylesheets="@../css/deaths.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveDetails" prefWidth="80.0" text="Save" />
+                        <Button fx:id="btnClear" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearDetails" prefWidth="80.0" text="Clear" />
+                        <Button fx:id="btnDashboard" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#backToDash" prefWidth="80.0" text="Dashboard" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TableView fx:id="tblDisplay" layoutX="1.0" layoutY="-1.0" prefHeight="598.0" prefWidth="804.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colFirstname" prefWidth="75.0" text="Firstname" />
+                  <TableColumn fx:id="colSurname" prefWidth="75.0" text="Surname" />
+                  <TableColumn fx:id="colAge" prefWidth="75.0" text="Age" />
+                  <TableColumn fx:id="colNextOfKin" prefWidth="75.0" text="Next of Kin" />
+                  <TableColumn fx:id="colDeathDate" prefWidth="75.0" text="Death Date" />
+                  <TableColumn fx:id="colBurialDate" prefWidth="317.0" text="Burial Date" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

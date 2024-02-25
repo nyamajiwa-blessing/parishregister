@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" styleClass="root" stylesheets="@../css/baptism.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parishregister.BaptismController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER" layoutY="-2.0" prefHeight="600.0" prefWidth="324.0" spacing="10.0">
+               <children>
+                  <Label text="Baptism Details" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Full Name" textFill="WHITE" />
+                  <TextField fx:id="txtFullName" prefHeight="35.0" promptText="Full Name" styleClass="input-fields" stylesheets="@../css/baptism.css" />
+                  <Label text="Date of Birth" textFill="WHITE" />
+                  <TextField fx:id="txtDateOfBirth" layoutX="15.0" layoutY="137.0" prefHeight="35.0" promptText="Date of Birth" styleClass="input-fields" stylesheets="@../css/baptism.css" />
+                  <Label layoutX="10.0" layoutY="27.0" text="Place of Residence" textFill="WHITE" />
+                  <TextField fx:id="txtResidence" layoutX="10.0" layoutY="44.0" prefHeight="35.0" promptText="Place of Residence" styleClass="input-fields" stylesheets="@../css/baptism.css" />
+                  <Label layoutX="10.0" layoutY="69.0" text="Baptism Location" textFill="WHITE" />
+                  <TextField fx:id="txtLocation" layoutX="10.0" layoutY="86.0" prefHeight="35.0" promptText="Baptism Location" styleClass="input-fields" stylesheets="@../css/baptism.css" />
+                  <Label layoutX="10.0" layoutY="111.0" text="Baptised By (Full Name)" textFill="WHITE" />
+                  <TextField fx:id="txtBaptisedBy" layoutX="10.0" layoutY="128.0" prefHeight="35.0" promptText="Baptised By" styleClass="input-fields" stylesheets="@../css/baptism.css" />
+                  <Label layoutX="10.0" layoutY="153.0" text="Married to" textFill="WHITE" />
+                  <TextField fx:id="txtMarried" layoutX="10.0" layoutY="170.0" prefHeight="35.0" promptText="Married To" styleClass="input-fields" stylesheets="@../css/baptism.css" />
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="314.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveDetails" prefHeight="40.0" prefWidth="80.0" styleClass="btn" stylesheets="@../css/baptism.css" text="Save" />
+                        <Button fx:id="btnClear" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearDetails" prefHeight="40.0" prefWidth="80.0" styleClass="btn" stylesheets="@../css/baptism.css" text="Clear" />
+                        <Button fx:id="btnDashboard" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="114.0" styleClass="btn" stylesheets="@../css/baptism.css" text="Dashboard" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TableView fx:id="tblDisplay" layoutY="-1.0" prefHeight="598.0" prefWidth="768.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="33.0" text="ID" />
+                <TableColumn fx:id="colFullName" prefWidth="130.0" text="Full Name" />
+                  <TableColumn fx:id="colDateOfBirth" prefWidth="119.0" text="Date of birth" />
+                  <TableColumn fx:id="colPlaceOfResidence" prefWidth="119.0" text="Place of Residence" />
+                  <TableColumn fx:id="colBaptismLocation" prefWidth="119.0" text="Baptism Location" />
+                  <TableColumn fx:id="colBaptiserName" prefWidth="95.0" text="Baptised By" />
+                  <TableColumn fx:id="colMarriedTo" prefWidth="152.0" text="Married To" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
